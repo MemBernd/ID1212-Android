@@ -45,9 +45,7 @@ public class Listener extends AsyncTask<Void, Void, String> {
     @Override
     protected void onPostExecute(String message) {
         String[] msg = message.split(Constants.HEADER_DELIMITER);
-        for (String elem : msg) {
-            System.out.println(elem);
-        }
+
         if (msg.length < 2) {
             Toast.makeText(context, "Corrupt message received", Toast.LENGTH_SHORT).show();
         } else {
